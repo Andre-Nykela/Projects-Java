@@ -15,8 +15,8 @@ public class Program {
         int n = sc.nextInt();
 
 
-        List<Employee> list = new ArrayList<>(); // Primeiro de tudo, na lista colocar o
-        // nome da class que eu crei.
+        List<Employee> list = new ArrayList<>(); // Na 'list' colocar o
+        // nome da class que foi criada.
 
         for (int i = 0; i < n; i++) {
             System.out.println("Employee: #" + (1 + i) + ":");
@@ -35,7 +35,7 @@ public class Program {
         System.out.print("Enter the employee id that will have salary increase: ");
         int idNum = sc.nextInt();
 
-        //Aqui tbm colocar o nome da class que eu criei para buscar se existe o id do funcionario
+        //Colocar o nome da class que foi criada para buscar se existe o id do funcionario
         Employee findID = list.stream().filter(x -> x.getId() == idNum).findFirst().orElse(null);
 
         if (findID == null) {
@@ -43,8 +43,8 @@ public class Program {
         } else {
             System.out.print("Enter the percentage: ");
             double percent = sc.nextDouble();
-            findID.increaseSalary(percent); //se encontrar o id, aqui sera onde vai
-            // almentar o salario do funcionario através de um metodo que eu crei na clase.
+            findID.increaseSalary(percent); //Se um id for encontrado, aqui será onde vai
+            // aumentar o salário do funcionario através do metodo criado na classe.
         }
         System.out.println();
         for (Employee e : list) { //for each loop para imprimir na tela os dados atualizados.
